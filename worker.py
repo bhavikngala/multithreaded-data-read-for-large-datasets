@@ -1,9 +1,9 @@
-from queue import Queue
 from threading import Thread
 
 class ReadWorker(Thread):
 
 	def __init__(self, dataQueue, dataFilenameQueue, numReadFiles):
+		
 		Thread.__init__(self)
 		
 		# read data and put into this queue
@@ -51,3 +51,10 @@ class ReadWorker(Thread):
 			# terminate thread on receivin signal
 			if terminateThread:
 				break
+
+	# setter function to set readData flag True
+	def setReadDataFlag(True):
+		self.readData = True
+
+def readData(filepath):
+	return filepath
